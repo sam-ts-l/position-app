@@ -1,3 +1,3 @@
 <div class="w-full text-center">
-    This is an about page
+    A GNSS Quest game made by Laxmi, Tushen and Alina for Satellite Positioning Assessment (GEOM2066).
 </div>

@@ -23,6 +23,12 @@
     >
         About
     </a>
+    <a
+        class="btn btn-ghost text-xl"
+        href="{base}/game"
+    >
+        Game
+    </a>
 </div>
 
 <!-- Main content -->

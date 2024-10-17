@@ -11,7 +11,7 @@ This project uses the following frameworks and libraries, click the links for th
 3. [DaisyUI](https://daisyui.com/): UI library based on TailwindCSS
 4. [Svelte-Geolocation](https://github.com/metonym/svelte-geolocation): Geolocation API wrapper for Svelte
 5. [Svelte-MapLibre](https://github.com/dimfeld/svelte-maplibre): MapLibre wrapper for Svelte
-
+p
 More resources:
 
 1. [A collection of potentially useful geospatial libraries](https://github.com/joewdavies/awesome-frontend-gis)
