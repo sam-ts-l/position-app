@@ -65,8 +65,7 @@
     let questMarkersVisible = []
     let usedHints = []
 
-    // Update the value of remainingQuests according to the number of quests
-    let remainingQuests = [1, 2, 3]
+    let remainingQuests = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     let questsCompleted = 0
     let totalScore = 0
 
@@ -122,13 +121,13 @@
         let distanceElement = document.getElementById("distance")
 
         qualityElement.innerText = " " + accuracyMeter + " " + accuracyStrength + "%"
-        if (accuracyStrength < 30) {
+        if (accuracyStrength < 50) {
             qualityElement.innerText = "NO GNSS"
             usingGNSS = false
-        } else if (accuracyStrength < 50) {
+        } else if (accuracyStrength < 65) {
             qualityElement.style.color = "#c41f1f"
             usingGNSS = true
-        } else if (accuracyStrength < 75) {
+        } else if (accuracyStrength < 80) {
             qualityElement.style.color = "#c4851f"
             usingGNSS = true
         } else
