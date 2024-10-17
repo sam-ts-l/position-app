@@ -26,7 +26,7 @@
             <ul
                 tabindex="0"
                 class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                <li><a href="{base}/">Home</a></li>
+                <li><a href="{base}/">Game</a></li>
                 <li><a href="{base}/game">Home</a></li>
                 <li><a href="{base}/rules">Rulebook</a></li>
                 <!--<li><a href="{base}/about">About</a></li>-->

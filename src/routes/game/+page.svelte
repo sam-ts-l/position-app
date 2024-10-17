@@ -9,7 +9,7 @@
     <button class="btn btn-wide">
         <a
             class="btn btn-ghost text-xl"
-            href="../game"
+            href="../"
         >
             Start Game
         </a>
