@@ -164,13 +164,17 @@ export function startGame() {
 export function getHint1(currentQuest, usedHints, gameMap) {
     alert(currentQuest.hint1)
 
-    let offsetCenter = 0
-    let lat = currentQuest.latitude + offsetCenter
-    let lng = currentQuest.longitude + offsetCenter
+    // Range:
+    // Max: 0.003
+    // Min: 0.0011
+    let offsetLat = Math.min(Math.max(Math.random(), 0.11), 0.3) * 0.01 / 2
+    let offsetLng = Math.min(Math.max(Math.random(), 0.11), 0.3) * 0.01
+    let lat = currentQuest.latitude + offsetLat
+    let lng = currentQuest.longitude + offsetLng
 
     gameMap.flyTo({
         center: [lng, lat],
-        zoom: 14
+        zoom: 15
     })
 
     if (!usedHints.includes(1)) {
