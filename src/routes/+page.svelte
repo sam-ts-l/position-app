@@ -139,13 +139,13 @@
 
         markers = [{
             lngLat: { lng:coords[0], lat:coords[1] },
-            label: '📍',
+            label: '🧍',
             name: 'Your current position',
         }]
 
         playerLivePosition = {
             lngLat: { lng: watchedPosition.coords.longitude, lat: watchedPosition.coords.latitude },
-            label: '📍',
+            label: '🧍',
             name: 'Your current position',
         }
 
@@ -330,7 +330,7 @@
         {#each markers as { lngLat, label, name }, i (i)}
             <Marker
                 {lngLat}
-                class="text-2xl text-black"
+                class="text-4xl text-black"
             >
                 <span>
                     {label}
