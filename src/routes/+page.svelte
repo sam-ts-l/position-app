@@ -113,7 +113,7 @@
         let accuracyMeter = "▒▒▒"
 
         for (let i=0; i<accuracyStrength/30; i++) {
-             accuracyMeter = accuracyMeter.replace(accuracyEmpty, accuracyFilled)
+            accuracyMeter = accuracyMeter.replace(accuracyEmpty, accuracyFilled)
         }
 
         let qualityElement = document.getElementById("debug-msg")
@@ -131,7 +131,7 @@
             qualityElement.style.color = "#c4851f"
             usingGNSS = true
         } else
-        qualityElement.style.color = "#59c41f"
+            qualityElement.style.color = "#59c41f"
         usingGNSS = true
 
         scoreBox.innerText = totalScore
@@ -259,24 +259,24 @@
     <div class="flex flex-col items-center">
         <div class="flex justify-center align-middle mt-2">
             <button
-                class="btn-sm btn-ghost text-sm"
+                class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
                 on:click={() => {
                     bounds = getMapBounds(markers);
                 }}>
                 Center
             </button>
             <button
-                class="btn-sm btn-ghost text-sm mx-2"
+                class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
                 on:click={() => getHint1(currentQuest, usedHints, gameMap)}>
                 Hint 1
             </button>
             <button
-                class="btn-sm btn-ghost text-sm mx-2"
+                class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
                 on:click={() => getHint2(currentQuest, usedHints)}>
                 Hint 2
             </button>
             <button
-                class="btn-sm btn-ghost text-sm mx-2"
+                class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
                 on:click={() => getHint3(currentQuest, usedHints)}>
                 Hint 3
             </button>
