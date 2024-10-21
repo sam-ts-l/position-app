@@ -199,6 +199,7 @@
         geojsonData = await response.json()
     })
 </script>
+<<<<<<< HEAD
 
 <div class="flex flex-col h-[calc(100vh-80px)] w-full">
     <!-- Might need to research on how to make a responsive layout -->
@@ -353,4 +354,31 @@
             </DefaultMarker>
         {/if}
     </MapLibre>
+=======
+<div class="flex flex-col items-center justify-center min-h-screen space-y-4">
+    <h1 class="text-5xl font-bold mb-4">Welcome to GNSS Quest!</h1>
+    <p class="text-lg text-center max-w-2xl mb-8">
+        Explore the world in a whole new way! Track your position, discover hidden spots, and compete with others.
+    </p>
+    <button class="btn btn-wide">
+        <a
+            class="btn btn-ghost text-xl"
+            href="../game"
+        >
+            Start Game
+        </a>
+        <a
+            class="btn btn-ghost text-xl"
+            href="../rules"
+        >
+            How to play
+        </a>
+        <a
+            class="btn btn-ghost text-xl"
+            href="../about"
+        >
+            About
+        </a>
+    </button>
+>>>>>>> parent of 8cb37f3 (swap game page and home page)
 </div>
