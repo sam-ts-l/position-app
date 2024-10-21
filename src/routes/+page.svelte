@@ -19,5 +19,11 @@
         >
             How to play
         </a>
+        <a
+            class="btn btn-ghost text-xl"
+            href="../about"
+        >
+            About
+        </a>
     </button>
 </div>
