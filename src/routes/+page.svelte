@@ -355,4 +355,3 @@
         {/if}
     </MapLibre>
 </div>
-
