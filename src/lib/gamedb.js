@@ -22,7 +22,8 @@ export function getPlaces() {
                 "hint2": "Established in 1854, I am Australia’s oldest public library with over 2 million books inside me.",
                 "hint3": "Look for my distinctive reading room, which features a stunning circular design and a ceiling adorned with intricate details, making it a popular spot for both study and photography.",
                 "latitude": -37.81,
-                "longitude": 144.964598
+                "longitude": 144.964598,
+                "areaScale": 5
             },
             {
                 "questId": 2,
@@ -33,7 +34,8 @@ export function getPlaces() {
                 "hint2": "I’m a UNESCO World Heritage Site that started in the 1850s and became well-known for hosting Australia’s first Parliament in my famous exhibition building in 1901.",
                 "hint3": "Look for my large grassy areas, tree-lined paths, and decorative fountains, along with a children's playground shaped like a Victorian maze, all surrounding a beautiful dome-topped building.",
                 "latitude": -37.805431,
-                "longitude": 144.971399
+                "longitude": 144.971399,
+                "areaScale": 10
             },
             {
                 "questId": 3,
@@ -44,7 +46,8 @@ export function getPlaces() {
                 "hint2": "Look for the striking bronze statue of a worker holding a pickaxe, surrounded by intricate engravings that tell the story of labor rights and struggles.",
                 "hint3": "Look for my unique granite column with a globe on top and the words 'Rest, Labour, Recreation,' clearly shown at the corner of Russell and Victoria Streets.",
                 "latitude": -37.807153,
-                "longitude": 144.965577
+                "longitude": 144.965577,
+                "areaScale": 2
             },
             {
                 "questId": 4,
@@ -55,7 +58,8 @@ export function getPlaces() {
                 "hint2": "Founded in 1854, I display Australia's rich cultural heritage, including exhibits on Aboriginal history and Melbourne's development.",
                 "hint3": "Look for my eye-catching modern design, with large galleries that feature a lush rainforest and an impressive IMAX theater, all in the World Heritage-listed Royal Exhibition Building.",
                 "latitude": -37.8033,
-                "longitude": 144.971754
+                "longitude": 144.971754,
+                "areaScale": 4
             },
             {
                 "questId": 5,
@@ -66,7 +70,8 @@ export function getPlaces() {
                 "hint2": "Originally gifted to Melbourne in the late 19th century, the fountain serves as a symbol of friendship between Melbourne and its sister city, Paris.",
                 "hint3": "Look for my detailed lion masks and the beautifully crafted cast iron cap on my basin, all set against the Royal Exhibition Building.",
                 "latitude": -37.804866,
-                "longitude": 144.972849
+                "longitude": 144.972849,
+                "areaScale": 2
             },
             {
                 "questId": 6,
@@ -77,7 +82,8 @@ export function getPlaces() {
                 "hint2": "Find me at the corner of Spring and Macarthur Streets, where I sit on a large limestone and granite base, surrounded by greenery and a sense of history.",
                 "hint3": "I honor Charles George Gordon, a British Army officer known for his service in various military campaigns, including in China and Sudan.",
                 "latitude": -37.808355,
-                "longitude": 144.972903
+                "longitude": 144.972903,
+                "areaScale": 2
             },
             {
                 "questId": 7,
@@ -88,7 +94,8 @@ export function getPlaces() {
                 "hint2": "Founded in 1887 as Melbourne's first Working Men's College, I honor my founder, a philanthropist who changed education for the working class.",
                 "hint3": "Look for my impressive Gothic Revival architecture on La Trobe Street, with detailed stonework and a prominent statue of my founder in front.",
                 "latitude": -37.808906,
-                "longitude": 144.965215
+                "longitude": 144.965215,
+                "areaScale": 2
             },
             {
                 "questId": 8,
@@ -99,7 +106,8 @@ export function getPlaces() {
                 "hint2": "Established in 1845 and active until 1924, I am known for holding some of Australia’s most infamous inmates, including the legendary bushranger Ned Kelly, who met his end here.",
                 "hint3": "Find my big bluestone building at 377 Russell Street, with original cells and a gallows, in a museum that shares the stories of those who lived and died here.",
                 "latitude": -37.807832,
-                "longitude": 144.965317
+                "longitude": 144.965317,
+                "areaScale": 4
             },
             {
                 "questId": 9,
@@ -110,7 +118,8 @@ export function getPlaces() {
                 "hint2": "I am home to the oldest trade union building in the world, where the eight-hour workday was first championed by dedicated laborers.",
                 "hint3": "Look for my grand façade on Lygon Street, featuring a tall clock tower and colorful murals that celebrate the labor movement's history.",
                 "latitude": -37.806467,
-                "longitude": 144.966378
+                "longitude": 144.966378,
+                "areaScale": 3
             },
             {
                 "questId": 10,
@@ -121,11 +130,11 @@ export function getPlaces() {
                 "hint2": "I honor an important figure in Melbourne's history, known for founding the State Library of Victoria and overseeing the trial of a famous bushranger.",
                 "hint3": "Find me at the front of the State Library, on a tall granite base, with detailed bronze work that reflects my legacy.",
                 "latitude": -37.810031,
-                "longitude": 144.964345
+                "longitude": 144.964345,
+                "areaScale": 2
             }
         ]
     }
 
     return places
 }
-
