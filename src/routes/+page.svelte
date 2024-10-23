@@ -107,32 +107,33 @@
             initialPosition = false
         }
 
-        let accuracyStrength = Math.floor(Math.min(100, Math.max(36 - watchedPosition.coords.accuracy, 1) * 3))
+        let accuracyStrengthMetres = Math.ceil(watchedPosition.coords.accuracy)
         let accuracyEmpty = "▒"
         let accuracyFilled = "█"
-        let accuracyMeter = "▒▒▒"
-
-        for (let i=0; i<accuracyStrength/30; i++) {
-             accuracyMeter = accuracyMeter.replace(accuracyEmpty, accuracyFilled)
-        }
+        let accuracyMeter = ""
 
         let qualityElement = document.getElementById("debug-msg")
         let scoreBox = document.getElementById("scorebox")
         let distanceElement = document.getElementById("distance")
 
-        qualityElement.innerText = " " + accuracyMeter + " " + accuracyStrength + "%"
-        if (accuracyStrength < 50) {
-            qualityElement.innerText = "NO GNSS"
+        if (accuracyStrengthMetres >= 20) {
+            accuracyMeter = "NO GNSS ❌ "
             usingGNSS = false
-        } else if (accuracyStrength < 65) {
+        } else if (accuracyStrengthMetres >= 12 && accuracyStrengthMetres < 20) {
             qualityElement.style.color = "#c41f1f"
+            accuracyMeter = "█▒▒"
             usingGNSS = true
-        } else if (accuracyStrength < 80) {
+        } else if (accuracyStrengthMetres < 12 && accuracyStrengthMetres > 6 ) {
             qualityElement.style.color = "#c4851f"
+            accuracyMeter = "██▒"
             usingGNSS = true
-        } else
+        } else {
         qualityElement.style.color = "#59c41f"
+        accuracyMeter = "███"
         usingGNSS = true
+      }
+
+        qualityElement.innerText = accuracyMeter + " " + accuracyStrengthMetres + " m"
 
         scoreBox.innerText = totalScore
 
@@ -171,7 +172,8 @@
             distanceElement.innerText = "N/A"
         }
 
-        const threshold = 15
+        // const threshold = 15
+        let threshold = currentQuest.areaScale * 8
 
         if (distance <= threshold) {
             // get multiple values from a function call [hintsUsed, remainingQuests, totalScore, questsCompleted]
@@ -240,7 +242,7 @@
 
     <div class="px-8 flex new-row items-center w-30 max-w-30 font-bold text-sm">
         <div class="flex items-center">
-            GNSS Quality: &nbsp;
+            GNSS ACCU: &nbsp;
             <span id="debug-msg" class="tracking-tighter">N/A</span>
         </div>
         <div class="ml-auto">
@@ -353,4 +355,3 @@
         {/if}
     </MapLibre>
 </div>
-
