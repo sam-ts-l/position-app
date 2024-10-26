@@ -1,13 +1,14 @@
 // Interesting places in Melbourne nearby the RMIT university
 // Should contain a JSON of places with the following fields:
 // - name: the name of the place (should not be given as hint)
-// - description: a short description of the place (should not be given as hint, contains spoilers)
-// - hint0: a hint to the place (should be given as hint by default)
-// - hint1: same as hint 1 plus fly around the vicinity of the quest, hints deduct points
-// - hint2: a hint to the place
-// - hint3: a hint to the place
-// - lat: the latitude of the place 
-// - lng: the longitude of the place
+// - description: a short description of the place (this is shown after each quest is completed)
+// - hint0: hint given at the beginning of quest
+// - hint1: a hint to the place
+// - hint2: a hint to the place that is more specific than hint1
+// - hint3: a hint to the place that is more specific than hint2
+// - latitude: the latitude of the place
+// - longitude: the longitude of the place
+// - areaScale: this is tuned for each quest location (DO NOT CHANGE)
 // - image: URL of the image of the place [not required]
 export function getPlaces() {
 
@@ -59,7 +60,7 @@ export function getPlaces() {
                 "hint3": "Look for my eye-catching modern design, with large galleries that feature a lush rainforest and an impressive IMAX theater, all in the World Heritage-listed Royal Exhibition Building.",
                 "latitude": -37.8033,
                 "longitude": 144.971754,
-                "areaScale": 4
+                "areaScale": 5
             },
             {
                 "questId": 5,
@@ -95,7 +96,7 @@ export function getPlaces() {
                 "hint3": "Look for my impressive Gothic Revival architecture on La Trobe Street, with detailed stonework and a prominent statue of my founder in front.",
                 "latitude": -37.808906,
                 "longitude": 144.965215,
-                "areaScale": 2
+                "areaScale": 5
             },
             {
                 "questId": 8,
@@ -107,7 +108,7 @@ export function getPlaces() {
                 "hint3": "Find my big bluestone building at 377 Russell Street, with original cells and a gallows, in a museum that shares the stories of those who lived and died here.",
                 "latitude": -37.807832,
                 "longitude": 144.965317,
-                "areaScale": 4
+                "areaScale": 5
             },
             {
                 "questId": 9,
@@ -119,7 +120,7 @@ export function getPlaces() {
                 "hint3": "Look for my grand façade on Lygon Street, featuring a tall clock tower and colorful murals that celebrate the labor movement's history.",
                 "latitude": -37.806467,
                 "longitude": 144.966378,
-                "areaScale": 3
+                "areaScale": 5
             },
             {
                 "questId": 10,
