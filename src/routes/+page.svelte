@@ -175,6 +175,7 @@
         // const threshold = 15
         let threshold = currentQuest.areaScale * 8
 
+        // mark quest as complete
         if (distance <= threshold) {
             // get multiple values from a function call [hintsUsed, remainingQuests, totalScore, questsCompleted]
             // https://stackoverflow.com/questions/2917175/return-multiple-values-in-javascript
@@ -187,6 +188,8 @@
             // reset quest-realted settings after the completion of a quest
             currentQuest = 0
             distanceElement.innerText = "N/A"
+            hintsUsed = 0
+            usedHints = []
         }
     }
 
