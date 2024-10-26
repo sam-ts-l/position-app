@@ -174,7 +174,7 @@ export function getHint1(currentQuest, usedHints, gameMap) {
 
     gameMap.flyTo({
         center: [lng, lat],
-        zoom: 15
+        zoom: 17
     })
 
     if (!usedHints.includes(1)) {

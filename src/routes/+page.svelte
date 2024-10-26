@@ -102,7 +102,7 @@
         if (initialPosition) {
             gameMap.flyTo({
                 center: coords,
-                zoom: 14,
+                zoom: 15,
             })
             initialPosition = false
         }
@@ -133,7 +133,7 @@
         usingGNSS = true
       }
 
-        qualityElement.innerText = accuracyMeter + " " + accuracyStrengthMetres + " m"
+        qualityElement.innerText = accuracyMeter + "  " + accuracyStrengthMetres + "m"
 
         scoreBox.innerText = totalScore
 
@@ -255,8 +255,6 @@
         <div class="ml-auto">
             Score: &nbsp;
             <span id="scorebox">N/A</span>
-            <br>
-            Level: &nbsp;
             <span id="level" class="mt-1">{playerLevel}</span>
         </div>
     </div>
@@ -266,7 +264,11 @@
             <button
                 class="btn-sm btn-ghost text-sm"
                 on:click={() => {
-                    bounds = getMapBounds(markers);
+                    bounds =
+                        gameMap.flyTo({
+                            center: coords,
+                            zoom: 15,
+                        });
                 }}>
                 Center
             </button>
