@@ -18,7 +18,7 @@ export function getPlaces() {
                 "questId": 1,
                 "name": "State Library Victoria",
                 "description": "State Library Victoria",
-                "hint0": "I am a place of knowledge, where the whispers of history echo through my walls of grand halls and a famous dome crowns my central space.",
+                "hint0": "This majestic building, adorned with a stunning dome and grand entrance, stands as a beacon of knowledge in the heart of Melbourne. With its extensive collections and beautiful reading rooms, use this info with your knowledge to navigate to this landmark surrounded by bustling streets and cafés.",
                 "hint1": "I am a place of knowledge, where the whispers of history echo through my walls of grand halls and a famous dome crowns my central space.",
                 "hint2": "Established in 1854, I am Australia’s oldest public library with over 2 million books inside me.",
                 "hint3": "Look for my distinctive reading room, which features a stunning circular design and a ceiling adorned with intricate details, making it a popular spot for both study and photography.",
