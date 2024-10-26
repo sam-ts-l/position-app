@@ -90,7 +90,6 @@ export function loadQuest(playerLocation, remainingQuests, questsCompleted) {
     questPlace = questsWithShortestDistance[randomNumber]
 
     if (questPlace == undefined) {
-        alert("You have completed all the quests. Game over!")
         return "Game Over"
     }
     currentQuest = getQuestById(questPlace.id)
@@ -143,8 +142,6 @@ export function completeQuest(questId, startTime, usedHints, remainingQuests, to
     // Testing
     // console.log("Completed quest:", questId)
     // console.log("Congratulations! You have completed the quest. Total score: " + questScore + ". Your level: " + newLevel)
-
-    alert("Congratulations! You have completed the quest. Total score: " + questScore + ". Your level: " + newLevel)
     return [usedHints.length, totalScore, questsCompleted]
 }
 
@@ -153,6 +150,7 @@ export function completeQuest(questId, startTime, usedHints, remainingQuests, to
 export function startGame() {
     const now = Date.now()
     console.log("Game started at:", now)
+
     return now
 }
 

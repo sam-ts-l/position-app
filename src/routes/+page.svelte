@@ -47,6 +47,7 @@
     let coords = [144.9639, -37.8083]
 
     // game-related variables
+    let newGame = true
     let gamePlaces = getPlaces()["places"]
     const gameLoadTime = Date.now()
     let questStartTime
@@ -149,7 +150,19 @@
             name: 'Your current position',
         }
 
+        if (newGame) {
+            // TODO: show 5 messages to the player upon game start
+            alert("1. Game has started")
+            alert("2. Game has started")
+            alert("3. Game has started")
+            alert("4. Game has started")
+            alert("5. Game has started")
+            newGame = false
+        }
+
         if (!currentQuest) {
+            questStartTime = startGame()
+
             currentQuest = loadQuest(playerLivePosition, remainingQuests, questsCompleted)
 
             if (currentQuest == "Game Over") {
@@ -161,8 +174,6 @@
                 label: '📌',
                 name: currentQuest.name,
             }
-
-            questStartTime = startGame()
         }
 
         distance = getDistance([playerLivePosition, questPlace])
@@ -181,6 +192,25 @@
             // https://stackoverflow.com/questions/2917175/return-multiple-values-in-javascript
             [hintsUsed, totalScore, questsCompleted] = completeQuest(currentQuest.questId, questStartTime, usedHints, remainingQuests, totalScore, questsCompleted)
             playerLevel = getLevel(totalScore)
+
+            // TODO: show 5 messages to the player upon quest completion
+            alert("Congratulations! You have completed the quest. Total score: " + totalScore + ". Your level: " + playerLevel)
+            alert("Deliverable (description)")
+            alert("Yo pani chaiyo ki k?")
+            alert("Yo pani chaiyo ki k?")
+
+            // TODO: show 5 messages to the player upon game completion
+            // check if the final quest id completed
+            if (remainingQuests.length == 0) {
+                alert("1. Game Complete")
+                alert("2. Game Complete")
+                alert("3. Game Complete")
+                alert("4. Game Complete")
+                alert("5. Game Complete")
+            }
+            else {
+                alert("Ready for next one? Press OK wala")
+            }
 
             // need to work on this
             // addQuestMarker(currentQuest.name, questMarkersVisible)
