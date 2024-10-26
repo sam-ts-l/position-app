@@ -167,14 +167,16 @@ export function getHint1(currentQuest, usedHints, gameMap) {
     // Range:
     // Max: 0.003
     // Min: 0.0011
-    let offsetLat = Math.min(Math.max(Math.random(), 0.11), 0.3) * 0.01 / 2
-    let offsetLng = Math.min(Math.max(Math.random(), 0.11), 0.3) * 0.01
+    // New Max: 0.003/3 = 0.001
+    // let offsetLat = Math.min(Math.max(Math.random(), 0.11), 0.3) * 0.01 / 2
+    let offsetLat = Math.min(Math.max(Math.random(), 0.11), 0.1) * 0.01 / 2
+    let offsetLng = Math.min(Math.max(Math.random(), 0.11), 0.1) * 0.01
     let lat = currentQuest.latitude + offsetLat
     let lng = currentQuest.longitude + offsetLng
 
     gameMap.flyTo({
         center: [lng, lat],
-        zoom: 17
+        zoom: 16
     })
 
     if (!usedHints.includes(1)) {
