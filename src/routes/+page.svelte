@@ -151,7 +151,6 @@
         }
 
         if (newGame) {
-            // TODO: show 5 messages to the player upon game start
             alert("It all started with a single spark… A cyber attack so big, it wiped out everything. The world’s digital maps, data, even our memories—gone in an instant. They called it the Blackout. All the maps we trusted—Google Maps, OpenStreetMap—vanished, like smoke blown away by the wind.\n\nAnd with that, Melbourne… our beloved city, got lost in the digital fog. Streets that once buzzed with life grew empty. It’s like the city itself faded away, one forgotten corner at a time. The world moved on… but I haven’t.")
             alert("You’re a local explorer, just like I used to be. You know the city, its heart, and its stories. Now, you’re one of the few who can make a difference.\n\nYour love for Melbourne is the spark we need to revive it! But I can’t do this for you; I need your help.")
             alert("Your mission? Simple, but important. Rediscover Melbourne through numerous quests. Find its lost landmarks, its forgotten places, and help put this city back on the map—literally! With every step, you’ll be bringing Melbourne back to life.\n\nAt the end of each quest, you’ll gather location details and all the necessary information on a monument, which you’ll compile for us to publish to a server I’ve just created. The server will handle the rest!")
@@ -189,12 +188,10 @@
             [hintsUsed, totalScore, questsCompleted] = completeQuest(currentQuest.questId, questStartTime, usedHints, remainingQuests, totalScore, questsCompleted)
             playerLevel = getLevel(totalScore)
 
-            // TODO: show 4 messages to the player upon quest completion
             alert("Amazing work! You’ve now rediscovered " + currentQuest.name + " and are among the few who truly know the ins and outs of this magnificent landmark.\n\nTake a moment to compile all the details you’ve gathered and send it my way. I’ll verify that everything checks out, and once confirmed, we can go ahead and publish it to our server.")
             alert("Compiled Details:\n\n" + currentQuest.description)
             alert("Great job! You’ve crafted a perfect record of " + currentQuest.name + ". This will help thousands of future explorers to discover, learn, and experience this amazing place.\n\nJust give me an ‘OK’ when you’re ready, and I’ll publish it on the server for everyone to access.")
 
-            // TODO: show 5 messages to the player upon game completion
             // check if the final quest id completed
             if (remainingQuests.length == 0) {
                 alert("Congratulations, explorer! You’ve done what many believed impossible. You’ve uncovered every hidden gem, every forgotten story, and every corner of this city that deserved to be remembered. Melbourne owes you a debt of gratitude.")

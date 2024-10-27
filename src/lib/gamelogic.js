@@ -19,12 +19,9 @@ export function calculateQuestScore(completionTime, usedHints) {
     const questCompletionScore = 500
     const hintsUsed = usedHints.length
     const hintsPenalty = hintsUsed * 50
-    const timeBonus = Math.max((3600 - completionTime) * 0.05, 0)
+    const timeBonus = Math.ceil(Math.max((3600 - completionTime/1000) * 0.05, 0))
     const finalScore = questCompletionScore + timeBonus - hintsPenalty
 
-    // Testing:
-    console.log("calculateQuestScore")
-    console.log(`hintsPenalty = ${hintsPenalty}, timeBonus = ${timeBonus}, questCompletionScore = ${questCompletionScore}, finalScore = ${finalScore}`)
     return finalScore
 }
 
@@ -124,11 +121,12 @@ export function completeQuest(questId, startTime, usedHints, remainingQuests, to
     remainingQuests.splice(index, 1)
 
     questsCompleted = questsCompleted + 1
-    const questScore = calculateQuestScore((Date.now() - startTime) * 1000, usedHints)
+    const questScore = calculateQuestScore((Date.now() - startTime), usedHints)
     totalScore = totalScore + questScore
     const newLevel = getLevel(totalScore)
 
     console.log("DEBUG")
+    console.log("Start time:", startTime)
     console.log("Quest ID:", questId)
     console.log("Quest Score:", questScore)
     console.log("Total Score:", totalScore)
@@ -151,7 +149,7 @@ export function completeQuest(questId, startTime, usedHints, remainingQuests, to
 // This is used in other places to calculate time bonus
 export function startGame() {
     const now = Date.now()
-    console.log("Game started at:", now)
+    console.log("Quest started at:", now)
     return now
 }
 
