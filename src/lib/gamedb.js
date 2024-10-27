@@ -24,7 +24,7 @@ export function getPlaces() {
                 "hint3": "Nearby landmarks include a popular theater and a historical square, with the closest tram stop just a block away at the intersection of Swanston and La Trobe Streets. Keep an eye out for these clues as you make your way!",
                 "latitude": -37.81,
                 "longitude": 144.964598,
-                "areaScale": 5
+                "areaScale": 7
             },
             {
                 "questId": 2,
@@ -60,7 +60,7 @@ export function getPlaces() {
                 "hint3": "You’ll find it adjacent to the iconic Royal Exhibition Building, with major intersections like Rathdowne and Victoria Streets nearby. This is a great starting point for further exploration!",
                 "latitude": -37.8033,
                 "longitude": 144.971754,
-                "areaScale": 5
+                "areaScale": 7
             },
             {
                 "questId": 5,
