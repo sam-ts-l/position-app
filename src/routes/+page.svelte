@@ -47,7 +47,7 @@
     let coords = [144.9639, -37.8083]
 
     // game-related variables
-    let tutorialURL = "https://github.com/sam-ts-l/position-app/blob/main/help/Urban%20Explorers%20Tutorial.pdf"
+    let tutorialURL = "https://github.com/sam-ts-l/position-app/blob/main/help/Urban%20Explorers%20Tutorial.md"
     let newGame = true
     let gamePlaces = getPlaces()["places"]
     const gameLoadTime = Date.now()
