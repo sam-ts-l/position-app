@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>Noyocity</title>
+    <title>Urban Explorers</title>
 </svelte:head>
 
 <!-- Main content -->

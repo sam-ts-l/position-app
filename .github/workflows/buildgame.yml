@@ -1,5 +1,5 @@
 # Source: https://stackoverflow.com/questions/76131031/cant-deplopy-to-github-pages-with-pnpm
-name: Build Noyocity
+name: Build Urban Explorers
 on:
   push:
     branches: [main]
