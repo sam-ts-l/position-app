@@ -129,7 +129,7 @@ export function getPlaces() {
                 "hint0": "This statue honors a prominent figure in Melbourne’s history, celebrated for his contributions to education and the legal system. Standing tall in a bustling area, use this info with your knowledge to navigate to this significant location.",
                 "hint1": "You’ll find this statue near a well-known library, making it a popular stop for both students and tourists. The area is filled with activity, especially during school hours.",
                 "hint2": "As you approach, look for the nearby square where people often stop to take photos. The statue itself is surrounded by benches, inviting visitors to sit and learn about its history.",
-                "hint3": "This location is close to other historical sites, making it a perfect addition to your exploration of Melbourne’s rich past!",
+                "hint3": "This statue is located near the intersection of Swanston and La Trobe Streets, close to a prominent cultural center and other historical sites. It’s also just steps away from a bustling public tram route, making it a familiar landmark for locals.",
                 "latitude": -37.810031,
                 "longitude": 144.964345,
                 "areaScale": 2
