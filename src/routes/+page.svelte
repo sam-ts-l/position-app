@@ -152,11 +152,11 @@
 
         if (newGame) {
             // TODO: show 5 messages to the player upon game start
-            alert("1. Game has started")
-            alert("2. Game has started")
-            alert("3. Game has started")
-            alert("4. Game has started")
-            alert("5. Game has started")
+            alert("It all started with a single spark… A cyber attack so big, it wiped out everything. The world’s digital maps, data, even our memories—gone in an instant. They called it the Blackout. All the maps we trusted—Google Maps, OpenStreetMap—vanished, like smoke blown away by the wind.\nAnd with that, Melbourne… our beloved city, got lost in the digital fog. Streets that once buzzed with life grew empty. It’s like the city itself faded away, one forgotten corner at a time. The world moved on… but I haven’t.")
+            alert("You’re a local explorer, just like I used to be. You know the city, its heart, and its stories. Now, you’re one of the few who can make a difference. Your love for Melbourne is the spark we need to revive it! But I can’t do this for you; I need your help.")
+            alert("Your mission? Simple, but important. Rediscover Melbourne through numerous quests. Find its lost landmarks, its forgotten places, and help put this city back on the map—literally! With every step, you’ll be bringing Melbourne back to life. At the end of each quest, you’ll gather location details and all the necessary information on a monument, which you’ll compile for us to publish to a server I’ve just created. The server will handle the rest!")
+            alert("Now, don’t think I’m just going to hand you everything! I’ll give you clues, little riddles, and some will be tricky. After all, what fun is it if it’s too easy? But don’t worry—you’ve got this! Use your wits and your love for the city to complete these quests. Let’s help Melbourne become the vibrant city it always was!")
+            alert("I hope you understand your mission and the impact of the work you’re about to do. You’re leading a mission that will change Melbourne’s history forever! Now, to make sure you’re truly ready for this heroic journey: grab some water, pack a snack, and put on your comfiest pair of shoes… and probably get an umbrella too. Click ‘OK’ when you’re ready to begin.")
             newGame = false
         }
 
