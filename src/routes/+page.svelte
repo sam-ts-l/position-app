@@ -355,7 +355,7 @@
                 </FillLayer>
                 <LineLayer
                     layout={{ 'line-cap': 'round', 'line-join': 'round' }}
-                    paint={{ 'line-color': 'purple', 'line-width': 3 }}
+                    paint={{ 'line-color': 'purple', 'line-width': 3, 'line-opacity': 0.3 }}
                     beforeLayerType="symbol"
                 />
             </GeoJSON>
@@ -387,7 +387,7 @@
                 </FillLayer>
                 <LineLayer
                     layout={{ 'line-cap': 'round', 'line-join': 'round' }}
-                    paint={{ 'line-color': 'purple', 'line-width': 3 }}
+                    paint={{ 'line-color': 'purple', 'line-width': 3, 'line-opacity': 0.3 }}
                     beforeLayerType="symbol"
                 />
             </GeoJSON>
@@ -420,7 +420,7 @@
                 </FillLayer>
                 <LineLayer
                     layout={{ 'line-cap': 'round', 'line-join': 'round' }}
-                    paint={{ 'line-color': 'purple', 'line-width': 3 }}
+                    paint={{ 'line-color': 'purple', 'line-width': 3, 'line-opacity': 0.3 }}
                     beforeLayerType="symbol"
                 />
             </GeoJSON>
