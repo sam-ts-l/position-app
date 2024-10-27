@@ -23,8 +23,8 @@ export function calculateQuestScore(completionTime, usedHints) {
     const finalScore = questCompletionScore + timeBonus - hintsPenalty
 
     // Testing:
-    // console.log("calculateQuestScore")
-    // console.log(`hintsPenalty = ${hintsPenalty}, timeBonus = ${timeBonus}, questCompletionScore = ${questCompletionScore}, finalScore = ${finalScore}`)
+    console.log("calculateQuestScore")
+    console.log(`hintsPenalty = ${hintsPenalty}, timeBonus = ${timeBonus}, questCompletionScore = ${questCompletionScore}, finalScore = ${finalScore}`)
     return finalScore
 }
 
@@ -90,7 +90,6 @@ export function loadQuest(playerLocation, remainingQuests, questsCompleted) {
     questPlace = questsWithShortestDistance[randomNumber]
 
     if (questPlace == undefined) {
-        alert("You have completed all the quests. Game over!")
         return "Game Over"
     }
     currentQuest = getQuestById(questPlace.id)
@@ -144,7 +143,7 @@ export function completeQuest(questId, startTime, usedHints, remainingQuests, to
     // console.log("Completed quest:", questId)
     // console.log("Congratulations! You have completed the quest. Total score: " + questScore + ". Your level: " + newLevel)
 
-    alert("Congratulations! You have completed the quest. Total score: " + questScore + ". Your level: " + newLevel)
+    alert("Quest Completion Details:\n🎉🎉🎉\nQuest score: " + questScore + ".\nYour rank: " + newLevel + "\n🎉🎉🎉")
     return [usedHints.length, totalScore, questsCompleted]
 }
 

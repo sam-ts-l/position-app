@@ -47,6 +47,7 @@
     let coords = [144.9639, -37.8083]
 
     // game-related variables
+    let newGame = true
     let gamePlaces = getPlaces()["places"]
     const gameLoadTime = Date.now()
     let questStartTime
@@ -149,20 +150,26 @@
             name: 'Your current position',
         }
 
-        if (!currentQuest) {
-            currentQuest = loadQuest(playerLivePosition, remainingQuests, questsCompleted)
+        if (newGame) {
+            // TODO: show 5 messages to the player upon game start
+            alert("It all started with a single spark… A cyber attack so big, it wiped out everything. The world’s digital maps, data, even our memories—gone in an instant. They called it the Blackout. All the maps we trusted—Google Maps, OpenStreetMap—vanished, like smoke blown away by the wind.\n\nAnd with that, Melbourne… our beloved city, got lost in the digital fog. Streets that once buzzed with life grew empty. It’s like the city itself faded away, one forgotten corner at a time. The world moved on… but I haven’t.")
+            alert("You’re a local explorer, just like I used to be. You know the city, its heart, and its stories. Now, you’re one of the few who can make a difference.\n\nYour love for Melbourne is the spark we need to revive it! But I can’t do this for you; I need your help.")
+            alert("Your mission? Simple, but important. Rediscover Melbourne through numerous quests. Find its lost landmarks, its forgotten places, and help put this city back on the map—literally! With every step, you’ll be bringing Melbourne back to life.\n\nAt the end of each quest, you’ll gather location details and all the necessary information on a monument, which you’ll compile for us to publish to a server I’ve just created. The server will handle the rest!")
+            alert("Now, don’t think I’m just going to hand you everything! I’ll give you clues, little riddles, and some will be tricky. After all, what fun is it if it’s too easy?\n\nBut don’t worry—you’ve got this! Use your wits and your love for the city to complete these quests. Let’s help Melbourne become the vibrant city it always was!")
+            alert("I hope you understand your mission and the impact of the work you’re about to do. You’re leading a mission that will change Melbourne’s history forever!\n\nNow, to make sure you’re truly ready for this heroic journey: grab some water, pack a snack, and put on your comfiest pair of shoes… and probably get an umbrella too. Click ‘OK’ when you’re ready to begin.")
+            newGame = false
+        }
 
-            if (currentQuest == "Game Over") {
-                alert("Your final score is: " + totalScore)
-            }
+        if (!currentQuest) {
+            questStartTime = startGame()
+
+            currentQuest = loadQuest(playerLivePosition, remainingQuests, questsCompleted)
 
             questPlace = {
                 lngLat: { lng: currentQuest.longitude, lat: currentQuest.latitude },
                 label: '📌',
                 name: currentQuest.name,
             }
-
-            questStartTime = startGame()
         }
 
         distance = getDistance([playerLivePosition, questPlace])
@@ -181,6 +188,23 @@
             // https://stackoverflow.com/questions/2917175/return-multiple-values-in-javascript
             [hintsUsed, totalScore, questsCompleted] = completeQuest(currentQuest.questId, questStartTime, usedHints, remainingQuests, totalScore, questsCompleted)
             playerLevel = getLevel(totalScore)
+
+            // TODO: show 4 messages to the player upon quest completion
+            alert("Amazing work! You’ve now rediscovered " + currentQuest.name + " and are among the few who truly know the ins and outs of this magnificent landmark.\n\nTake a moment to compile all the details you’ve gathered and send it my way. I’ll verify that everything checks out, and once confirmed, we can go ahead and publish it to our server.")
+            alert("Compiled Details:\n\n" + currentQuest.description)
+            alert("Great job! You’ve crafted a perfect record of " + currentQuest.name + ". This will help thousands of future explorers to discover, learn, and experience this amazing place.\n\nJust give me an ‘OK’ when you’re ready, and I’ll publish it on the server for everyone to access.")
+
+            // TODO: show 5 messages to the player upon game completion
+            // check if the final quest id completed
+            if (remainingQuests.length == 0) {
+                alert("Congratulations, explorer! You’ve done what many believed impossible. You’ve uncovered every hidden gem, every forgotten story, and every corner of this city that deserved to be remembered. Melbourne owes you a debt of gratitude.")
+                alert("Through your dedication, the city now breathes anew. The landmarks you’ve restored will inspire thousands to explore, learn, and fall in love with Melbourne just as you have. You’ve brought history back to life and reminded us of the beauty we must never forget.")
+                alert("You are now among the ranks of Melbourne’s finest explorers, an elite group who will always be remembered for their incredible contributions. Your name will echo through the city’s heart, a testament to the passion and resilience of those who truly cherish this place.")
+                alert("Now, I sincerely hope the Blackout we faced never strikes again. But if such a day were to come… I’m glad to know we have a hero like you to save the day. Keep exploring, helping others, and living an amazing life. Until next time, my friend…")
+            }
+            else {
+                alert("Congratulations! With this quest completed, there’s a new spark of hope for " + currentQuest.name + " to shine in Melbourne once again. You’re bringing us closer to our goal, one discovery at a time.\n\nWhen you’re ready, just say ‘OK,’ and we’ll set out on the next quest!")
+            }
 
             // need to work on this
             // addQuestMarker(currentQuest.name, questMarkersVisible)
