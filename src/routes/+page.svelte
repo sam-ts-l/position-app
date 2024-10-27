@@ -47,6 +47,8 @@
     let coords = [144.9639, -37.8083]
 
     // game-related variables
+    // TODO: add tutorial PDF link here
+    let tutorialURL = ""
     let newGame = true
     let gamePlaces = getPlaces()["places"]
     const gameLoadTime = Date.now()
@@ -291,7 +293,7 @@
     <div class="flex flex-col items-center">
         <div class="flex justify-center align-middle mt-2">
             <button
-                class="btn-sm btn-ghost text-sm"
+                class="btn-sm btn-ghost text-xs"
                 on:click={() => {
                     bounds =
                         gameMap.flyTo({
@@ -302,19 +304,24 @@
                 Center
             </button>
             <button
-                class="btn-sm btn-ghost text-sm mx-2"
+                class="btn-sm btn-ghost text-xs mx-2"
                 on:click={() => getHint1(currentQuest, usedHints, gameMap)}>
                 Hint 1
             </button>
             <button
-                class="btn-sm btn-ghost text-sm mx-2"
+                class="btn-sm btn-ghost text-xs mx-2"
                 on:click={() => getHint2(currentQuest, usedHints)}>
                 Hint 2
             </button>
             <button
-                class="btn-sm btn-ghost text-sm mx-2"
+                class="btn-sm btn-ghost text-xs mx-2"
                 on:click={() => getHint3(currentQuest, usedHints)}>
                 Hint 3
+            </button>
+            <button
+                class="btn-sm btn-ghost text-xs mx-2"
+                on:click={() => window.open(tutorialURL, "_blank") }>
+                Help
             </button>
         </div>
     </div>
