@@ -215,13 +215,21 @@
     }
 
     let showGeoJSON = true
-    let geojsonData
+    let geojsonSururbs
+    let geojsonQuests
+    let geojsonLandmarks
 
     // Some additional GeoJSON data can be found here:
     // https://raw.githubusercontent.com/codeforgermany/click_that_hood/refs/heads/main/public/data/airports.geojson
     onMount(async () => {
-        const response = await fetch('melbourne.geojson')
-        geojsonData = await response.json()
+        const responseSururbs = await fetch('melbourne.geojson')
+        geojsonSururbs = await responseSururbs.json()
+
+        const responseQuests = await fetch('quests.geojson')
+        geojsonQuests = await responseQuests.json()
+
+        const responseLandmarks = await fetch('landmarks.geojson')
+        geojsonLandmarks = await await responseLandmarks.json()
     })
 </script>
 
@@ -319,16 +327,80 @@
         zoom={14}
         bind:map={gameMap}
     >
-
         {#if showGeoJSON}
             <GeoJSON
-                id="geojsonData"
-                data={geojsonData}
-                promoteId="name"
+                id="geojsonSururbs"
+                data={geojsonSururbs}
+                promoteId="geojsonSururbs"
             >
                 <FillLayer
                     paint={{
                         'fill-color': hoverStateFilter('purple', 'yellow'),
+                        'fill-opacity': 0.3,
+                    }}
+                    beforeLayerType="symbol"
+                    manageHoverState
+                >
+                    <Popup
+                        openOn="hover"
+                        let:data
+                    >
+                        {@const props = data?.properties}
+                        {#if props}
+                            <div class="flex flex-col gap-2">
+                                <p>{props.name}</p>
+                            </div>
+                        {/if}
+                    </Popup>
+                </FillLayer>
+                <LineLayer
+                    layout={{ 'line-cap': 'round', 'line-join': 'round' }}
+                    paint={{ 'line-color': 'purple', 'line-width': 3 }}
+                    beforeLayerType="symbol"
+                />
+            </GeoJSON>
+
+            <GeoJSON
+                id="geojsonLandmarks"
+                data={geojsonLandmarks}
+                promoteId="geojsonLandmarks"
+            >
+                <FillLayer
+                    paint={{
+                        'fill-color': hoverStateFilter('blue', 'orange'),
+                        'fill-opacity': 0.3,
+                    }}
+                    beforeLayerType="symbol"
+                    manageHoverState
+                >
+                    <Popup
+                        openOn="hover"
+                        let:data
+                    >
+                        {@const props = data?.properties}
+                        {#if props}
+                            <div class="flex flex-col gap-2">
+                                <p>{props.name}</p>
+                            </div>
+                        {/if}
+                    </Popup>
+                </FillLayer>
+                <LineLayer
+                    layout={{ 'line-cap': 'round', 'line-join': 'round' }}
+                    paint={{ 'line-color': 'purple', 'line-width': 3 }}
+                    beforeLayerType="symbol"
+                />
+            </GeoJSON>
+
+
+            <GeoJSON
+                id="geojsonQuests"
+                data={geojsonQuests}
+                promoteId="geojsonQuests"
+            >
+                <FillLayer
+                    paint={{
+                        'fill-color': hoverStateFilter('green', 'red'),
                         'fill-opacity': 0.3,
                     }}
                     beforeLayerType="symbol"
